@@ -1,0 +1,83 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.pokemon {
+    &__heading {
+        margin-top: 0;
+        color: v.$brown;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 6rem;
+
+        @include m.tablet { 
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            gap: 6rem;
+        }
+    }
+}
+
+.pokemon__card {
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 1px 2px 5px 1px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s;
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &-image {
+        margin: 0 auto;
+        width: 50%;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &-name {
+        text-align: center;
+        color: v.$black;
+        font-size: 2rem;
+        margin: 2rem 0 0 0;
+        text-transform: uppercase;
+    }
+
+    &-description {
+        text-align: left;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: darkorange;
+
+        &--span {
+            font-weight: normal;
+            color: gray;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.pokemon__button {
+    width: 20rem;
+    margin: 10rem auto 5rem auto;
+    & a {
+        @include m.button(red, red, v.$white);
+    }
+
+}
+
+
+
+
+
+
+

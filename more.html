@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon-More</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__grid container">
+            <div class="header__bar">
+                <div class="header__logo">
+                    <img class="header__logo-img" src="build/img/pokeball.webp" alt="pokeball">
+                    <p class="header__logo-text">Pokemon</p>
+                </div>
+                <nav class="header__nav">
+                    <a class="header__nav-link" href="index.html">Home</a>
+                    <a class="header__nav-link header__nav-link--active" href="more.html">More</a>
+                    <a class="header__nav-link" href="about.html">About</a>
+                    <a class="header__nav-link" target="_blank" href="https://pokeapi.co/docs/v2#pokemon">API</a>
+                </nav>
+            </div>
+            
+        </div>
+        
+
+    </header>
+
+    <section class="pokemon section container">
+        <h2 class="pokemon__heading">Pokédex</h2>
+        <form class="pokemon__filter" id="form">
+                <input class="pokemon__filter-search" id="filter-search" type="text" placeholder="Search pokemon">
+                <select class="pokemon__filter--color" id="filter-quantity">
+                    <option value="" disabled selected>== Quantity == </option>
+                    <option value="10">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="500">500</option>
+                    <option value="898">All</option>
+                </select>
+        </form>
+        <div class="pokemon__grid">
+            <!-- content-->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__grid container">
+            <h3 class="footer__heading">PokeAPI</h3>
+            <nav class="footer__social-icons">
+                <a class="footer__social-icon" href="https://github.com/YactayoC" target="_blank">
+                    <img src="build/img/github.webp" alt="social">
+                </a>
+                <a class="footer__social-icon" href="https://www.facebook.com/sebastianaron.yactayocrisostomo.7/"
+                    target="_blank">
+                    <img src="build/img/facebook.webp" alt="social">
+                </a>
+                <a class="footer__social-icon" href="#" target="_blank">
+                    <img src="build/img/twitter.webp" alt="social">
+                </a>
+                <a class="footer__social-icon" href="https://www.instagram.com/sebastianaronyactayo/?hl=es-la"
+                    target="_blank">
+                    <img src="build/img/instagram.webp" alt="social">
+                </a>
+            </nav>
+        </div>
+    </footer>
+    <script type="module" src="build/js/consultsAPI.js"></script>
+
+</body>
+
+</html>

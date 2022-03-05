@@ -1,0 +1,137 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header {
+    background-color: #f7cf07;
+    &__grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include m.tablet { 
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+
+}
+
+
+
+.header__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &-img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &-text {
+        font-size: 3rem;
+        font-weight: 700;
+        color: v.$brown;
+    }
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem;
+
+    @include m.tablet { 
+        flex-direction: row;
+        padding: 0;
+    }
+
+    &-link {
+        color: v.$brown;
+        font-size: 1.8rem;
+        font-weight: 400;
+        transition: color 0.3s;
+
+        &:hover {
+            color: v.$white;
+        }
+
+        &--active {
+            color: v.$white;
+        }
+    }    
+}
+
+.header__pikachu {
+    display: none;
+
+    @include m.tablet { 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 10rem 0;
+    }
+
+    &-text {
+        margin: 0;
+        color: v.$white;
+        font-size: 29rem;
+        font-weight: 900;
+        position: relative;
+        user-select: none;
+    }
+
+    &-img {
+        width: 60rem;
+        position: absolute;
+        right: 30rem;
+    }
+}
+
+.header__footer {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    align-items: flex-start;
+    justify-content: center;
+    margin-block: -3rem;
+    text-align: center;
+    margin-top: 3rem;
+
+    @include m.tablet { 
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        text-align: left;
+        margin-top: 0;
+        justify-content: center;
+        margin-block: -3rem;
+    }
+
+    &-text {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: v.$brown;
+        user-select: none;
+    }
+
+    &-button {
+        @include m.button(v.$brown, v.$brown, v.$white);
+    }
+}
+
+.header__border {
+
+    &-img {
+        background-color: v.$white;
+    }
+}

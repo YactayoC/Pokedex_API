@@ -1,0 +1,33 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer {
+    background-color: v.$black;
+    margin-top: 5rem;
+
+    &__grid {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__heading {
+        grid-row: 1 / 2;
+        color: v.$white;
+        text-align: center;
+        font-size: 3rem;
+
+    }
+
+    &__social-icons {
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__social-icon img{
+        width: 5rem;
+        height: 5rem;
+    }
+
+
+}
