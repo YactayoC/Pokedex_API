@@ -4,7 +4,7 @@
   "description": "poke-api project realized with fetchAPI and SASS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "npm gulp"
   },
   "author": "Sebastian Yactayo",
   "license": "ISC",
